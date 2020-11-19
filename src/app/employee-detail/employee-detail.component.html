@@ -1,0 +1,43 @@
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&display=swap"
+    rel="stylesheet">
+<div>
+    <h2>Add New Employee</h2>
+    <form [formGroup]="frm" class="form entry employee">
+        <div class="parent">
+            <div>
+                <label>Name :</label>
+                    <input type="text" class="input" placeholder="name" formControlName="EmployeeName">
+                <br />
+            </div>
+            <div>
+                <label>Age :</label>    
+                    <input type="number" class="input" placeholder="age" formControlName="Age" >
+                <br />
+            </div>
+            <div>
+                <Label>House No :</Label>
+                    <input type="number" class="input" placeholder="house number" formControlName="Houseno">
+                <br />
+                <Label>Marital Status :
+                    <select value="" formControlName="Status">
+                        <option>Married</option>
+                        <option>Single</option>
+                    </select>
+                </Label><br />
+                <label>Jobs :</label>
+                    <input type="text" class="input"  placeholder="your current job" formControlName="Jobs">
+                <br />
+                <Label>Phone :</Label>
+                    <input type="number" class="input"  placeholder="phone number" formControlName="Phone">
+                <br />
+                <label>Email :</label>
+                    <input type="email" class="input"  placeholder="email address" formControlName="Email">
+                <br />
+            </div>
+    
+            <button type="button" (click)="goBack()">Back</button>
+            <button type="button" (click)="enableForm()">Edit</button>
+            <button type="submit" (click)="UpdateData()">Save</button>
+        </div>
+    </form>
+</div>

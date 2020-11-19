@@ -1,0 +1,26 @@
+<!-- <button (click)="getEmployee()" class="button">Get Data</button> -->
+<div>
+    <ul class="list">
+        <li *ngFor="let row of employees; let i = index;" class="tbl-content">
+            <a routerLink="/detail/{{row.Userid}}">
+                <span class="badge">{{i+1}}</span> {{row.Username}}
+            </a> 
+        </li>
+    </ul>
+    <button routerLink="/add">Add</button>
+    <!-- <table style="width:100%">
+        <thead>
+            <tr>
+                <th class = "id">ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let row of employees" class="tbl-content">
+                <td>{{row.Userid}}</td>
+                <td>{{row.Username}}</td>
+            </tr>
+        </tbody>
+
+    </table> -->
+</div>
